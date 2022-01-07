@@ -1,4 +1,4 @@
-# sabrin_curiosity_main
+# sabrin_curiosity
 Django CRUD (Create, Retrieve, Update, Delete) Function Based Views
 
 ![Untitled-Diagram-316-1024x630](https://user-images.githubusercontent.com/97043022/148532110-f4502910-ba9d-4142-a909-3412b19cd062.jpg)
