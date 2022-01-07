@@ -30,3 +30,6 @@ def category(request,url):
     return render(request,"category.html",{'cat':cat, 'posts':posts})
 
 # This was written by Sushant Abrin
+
+def index(request):
+    return render(request,'index.html')
