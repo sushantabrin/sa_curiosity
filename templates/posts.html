@@ -1,0 +1,23 @@
+{%extends 'base.html'%}
+
+{%block title%} {{post.title}} {%endblock%}
+
+{%block content%}
+
+<!-- This was written by Sushant Abrin -->
+<br><br>
+    <div class="jumbotron">
+      <h1 class="display-4">{{post.title}}</h1>
+      <center><img src="/media/{{post.image}}" class="responsive-img"  alt=""></center><br>
+      <h6 class="lead" align="justify">{{post.content | safe}}</h6>
+      <hr class="my-4">
+      <p>From Category: {{post.cat.title}}, Added On {{post.date_added}} </p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="https://www.google.com/search?q={{post.title}}" role="button">Learn more</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,36 @@
+/* .bg-primary{
+  background:#4fafb8!important;
+} */
+
+.mt20{
+  margin-top:20px;
+}
+
+.mt50{
+  margin-top:10px;
+}
+
+.container-custom{
+  padding-right: 100px;
+  padding-left: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.item{
+  margin-right: 10px;
+  margin-left: 10px;
+  height:350px;
+  width:auto;
+}
+
+.l100{
+  margin-left: auto;
+}
+
+.bg-card{
+  background:#c8e0dd;
+}
+
+/* This was written by Sushant Abrin */
+/* There have been many changes. so many of the above are not usable */

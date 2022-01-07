@@ -1,0 +1,83 @@
+{%extends 'base.html'%}
+
+{%block title%} Welcome to Sabrin Curiosity {%endblock%}
+
+{%block content%}
+
+<br><br>
+<div class="owl-carousel">
+
+    {% for cat in cats %}
+
+    <div class="card item margin-left:10px;">
+
+        <div class="img-container">
+            <img src="/media/{{cat.image}}" class="responsive-img" style="height:200px;object-fit:cover;" alt="">
+        </div>
+
+        <div class="card-content">
+
+            <div class="card-title center-align">
+                {{cat.title}}
+            </div>
+
+            <!-- <p class="truncate">{{cat.description}}</p> -->
+
+
+            <div class="container center-align mt50">
+                <a href="/category/{{cat.url}}" class="btn bg-primary">View</a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    {% endfor %}
+
+</div> <br><br>
+
+<div class="container">
+
+<div class="jumbotron">
+
+  <div class="col s4 m12 l12">
+    <!-- when all the 12 grids come, start the loop -->
+    {%for p in posts%}
+
+      <div class="row">
+
+            <div class="col s8 m12 l12">
+
+                  <h3>{{p.title | safe}}</h3>
+                    {{p.content |truncatewords:60 | safe}}
+                    <!-- safe resolves the html syntaxing to normal text -->
+                    <!-- truncate decides the max length of words displayed -->
+                    <div class="mt20">
+                        <a href="/curiosity/{{p.url}}" class = "btn bg-primary left"> Read More </a>
+                    </div>
+                <!-- add above lines below endfor if readmore for page and not every post -->
+            </div>
+
+            <div class="col s4 m4">
+
+                <img src="/media/{{p.image}}" class="responsive-img" style="height:200px; width:400px;object-fit:cover;" alt="">
+
+            </div>
+
+
+        </div><br><br><br><br>
+
+
+      {%endfor%}
+
+  </div>
+
+
+</div>
+</div>
+
+
+
+
+{%endblock%}

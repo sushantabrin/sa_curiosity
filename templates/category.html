@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{%block title%} Welcome to Sabrin Curiosity {%endblock%}
+
+{%block content%}
+
+<!-- This was written by Sushant Abrin -->
+
+<div class="jumbotron">
+  <h1 class="display-4">{{cat.title}}</h1>
+
+  <center>
+    <img src="/media/{{cat.image}}" class="responsive-img" style="max-height:450px;width:100%;object-fit:cover;" alt="">
+    <div class="collection">
+
+          {% for p in posts%}
+
+           <h5><a href="/curiosity/{{p.url}}" class="collection-item">{{p.title}}</a></h5>
+
+           {%empty%}
+
+           <h5 style="color:grey;">No posts in this category</h5>
+
+           {%endfor%}
+    </div>
+</div>
+
+</center>
+{%endblock%}
